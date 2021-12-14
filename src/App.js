@@ -1,12 +1,15 @@
+import { DeviceUUID } from 'device-uuid';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var uuid = new DeviceUUID().get();
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p> 
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -16,6 +19,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          <h2>{uuid}</h2>
         </a>
       </header>
     </div>
